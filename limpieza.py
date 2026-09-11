@@ -1,23 +1,18 @@
 from pathlib import Path
 import spacy
 
-# Cargar el modelo de espanol
 nlp = spacy.load("es_core_news_sm")
 
-# Buscar el cuento en la misma carpeta del programa
 carpeta = Path(__file__).parent
 
 with open(carpeta / "cuento.txt", "r", encoding="utf-8") as archivo:
     texto = archivo.read()
 
-# Tokenizar el texto
 documento = nlp(texto)
 
 tokens_originales = [token.text for token in documento]
 tokens_limpios = []
 
-# Quitar palabras vacias, puntuacion y espacios
-# Despues convertir cada palabra a su lema en minusculas
 for token in documento:
     if not token.is_stop and not token.is_punct and not token.is_space:
         tokens_limpios.append(token.lemma_.lower())

@@ -1,6 +1,6 @@
 # Limpieza de un cuento con PLN
 
-Proyecto sencillo que carga `cuento.txt` y aplica tokenizacion, eliminacion de palabras vacias, eliminacion de puntuacion, conversion a minusculas y lematizacion. Tambien convierte el texto a numeros usando Bag of Words y TF-IDF.
+Proyecto sencillo que carga `cuento.txt` y realiza limpieza, lematizacion y vectorizacion con Bag of Words, TF-IDF y Word2Vec.
 
 ## Crear el entorno virtual en Git Bash
 
@@ -21,6 +21,7 @@ python -m spacy download es_core_news_sm
 ```bash
 python limpieza.py
 python vectorizacion.py
+python semantica_distribucional.py
 ```
 
-Al terminar se crean `resultado_limpio.txt`, `resultado_bow.csv` y `resultado_tfidf.csv`.
+El proyecto genera el texto limpio, las matrices de Bag of Words y TF-IDF, un modelo Word2Vec, los vectores semanticos y una grafica 3D.

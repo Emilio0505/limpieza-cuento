@@ -3,3 +3,6 @@ __pycache__/
 resultado_limpio.txt
 resultado_bow.csv
 resultado_tfidf.csv
+modelo_word2vec.model
+vectores_semanticos.txt
+grafica_semantica.png
