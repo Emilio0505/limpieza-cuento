@@ -1,1 +1,5 @@
 .venv/
+__pycache__/
+resultado_limpio.txt
+resultado_bow.csv
+resultado_tfidf.csv
